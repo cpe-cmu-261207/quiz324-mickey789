@@ -20,13 +20,15 @@ function App() {
             className="input"
             type="text"
             placeholder="e.q Coco"
+            id="name"
+            name="name"
             //update related state based on event
           ></input>
         </div>
 
         <div className="field">
           <label className="label">Gender</label>
-          <select className="input" type="text" placeholder="Please select ..">
+          <select className="input" id="gender" name="gender" type="text" placeholder="Please select ..">
             <option value="" disabled selected hidden>
               -- Select Gender --
             </option>
@@ -37,18 +39,18 @@ function App() {
 
         <div className="field">
           <label className="label">Age</label>
-          <input className="input" type="number" placeholder="e.q 5"></input>
+          <input className="input" id="age" name="age" type="number" placeholder="e.q 5"></input>
         </div>
 
-        <button className="button is-danger is-fullwidth">Submit</button>
+        <button className="button is-danger is-fullwidth" type="submit" value="submit">Submit</button>
 
         <div className="mb-4"></div>
 
         {/* display tables for all persons */}
         <p className="is-4 title has-text-centered">Pet List</p>
         {/* sample table */}
-        <ItemTable name={"Coco"} gender={"Male"} age={"5"} />
-        <p>Your name and code here</p>
+        <ItemTable name={"items".name} gender={"items".gender} age={"items".num} />
+        <p>Autcharayu Pornwatthananon 620612169</p>
       </div>
     </div>
   );
